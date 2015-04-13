@@ -3,7 +3,7 @@
  */
 // Paths
 var SRC_PATH =          './app',
-    DEV_PATH =          './dev',
+    DEV_PATH =          '..',
     PUB_PATH =          './pub',
 // Folders
     TEMPLATES_FOLDER =  'templates',
@@ -20,7 +20,6 @@ var SRC_PATH =          './app',
  */
 var del = require('del'),
     gulp = require('gulp'),
-    connect = require('gulp-connect-php'),
     debug = require('gulp-debug'),
     gulpif = require('gulp-if'),
     jade = require('gulp-jade'),
@@ -28,13 +27,6 @@ var del = require('del'),
     templatesglob = require('gulp-jade-globbing'),
     stylesglob = require('gulp-css-globbing'),
     rename = require('gulp-rename');
-
-// PHP server task
-gulp.task('server', function() {
-    connect.server({
-        base: DEV_PATH+'/'+TEMPLATES_FOLDER+'/'+TEMPLATE_NAME
-    });
-});
 
 // Clean Dev folder
 gulp.task('clean:dev', function (cb) {
@@ -93,5 +85,5 @@ gulp.task('watch:dev', function() {
 
 // Default task
 gulp.task('default', ['clean:dev'], function() {
-    gulp.start('server','templates:dev','styles:dev', 'scripts:dev', 'images:dev','watch:dev');
+    gulp.start('templates:dev','styles:dev', 'scripts:dev', 'images:dev','watch:dev');
 });
