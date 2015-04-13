@@ -1,0 +1,22 @@
+{
+  "name": "instaboot",
+  "version": "0.0.0",
+  "homepage": "https://github.com/steelcat/instaboot",
+  "authors": [
+    "Steelcat"
+  ],
+  "description": "Universal toolkit for create web apps & templates with Gulp - Instant CMS Version",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.2",
+    "bootstrap": "~3.3.4",
+    "lesshat": "~3.0.2"
+  }
+}
